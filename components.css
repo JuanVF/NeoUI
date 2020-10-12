@@ -2,54 +2,119 @@
     /* 
         MAIN COLOURS
     */
-    --main-color: #EFF2F9;
-    --bg-color: #B5BFC6;
-    --shadow-color-1: rgba(250, 251, 255, 0.7);
-    --shadow-color-2: rgba(22, 27, 29, 0.1) ; 
+    --main-color     : #EFF2F9;
+    --main-dk-color  : #EAEDF3;
+    --bg-color       : #B5BFC6;
+    --shadow-color-1 : rgba(250, 251, 255, 0.7);
+    --shadow-color-2 : rgba(22, 27, 29, 0.1) ; 
+    --font-color     : #6E7F8D;
 
     /*
         SHADOWS
     */
-    --shadow-in-1: inset -5px -5px 5px var(--shadow-color-1);
-    --shadow-in-2: inset 5px 5px 5px var(--shadow-color-2);
+    --shadow-in-1 : inset -5px -5px 5px var(--shadow-color-1);
+    --shadow-in-2 : inset 5px 5px 5px var(--shadow-color-2);
 
-    --shadow-1: -5px -5px 5px var(--shadow-color-1);
-    --shadow-2: 5px 5px 5px var(--shadow-color-2);
+    --shadow-1 : -5px -5px 5px var(--shadow-color-1);
+    --shadow-2 : 5px 5px 5px var(--shadow-color-2);
 
-    --shadow-1-md: -5px -5px 10px var(--shadow-color-1);
-    --shadow-2-md: 5px 5px 10px var(--shadow-color-2);
+    --shadow-1-md : -5px -5px 10px var(--shadow-color-1);
+    --shadow-2-md : 5px 5px 10px var(--shadow-color-2);
 
-    --shadow-1-xl: -5px -5px 15px var(--shadow-color-1);
-    --shadow-2-xl: 5px 5px 15px var(--shadow-color-2);
+    --shadow-1-xl : -5px -5px 15px var(--shadow-color-1);
+    --shadow-2-xl : 5px 5px 15px var(--shadow-color-2);
+
+    /*
+        GENERAL PURPOSE
+    */
+    --zoom-ratio : scale(1.05);
+    --padding-md : 15px 40px;
+}
+
+/*
+    GENERAL PURPOSE
+*/
+.neo-container-in, .neo-container-out-sm, .neo-container-out-md, .neo-container-out-xl,
+.neo-button, .neo-button-md, .neo-button-xl,
+.neo-input, .neo-text-area{
+    box-sizing       : border-box;
+    background-color : var(--main-color);
+    border-radius    : 10px;
+    transition: all 0.3s linear;
+}
+
+
+.neo-button, .neo-button-md, .neo-button-xl,
+.neo-input, .neo-text-area{
+    outline : none;
+    border: none;
+    padding : var(--padding-md);
 }
 
 /*
     CONTAINERS
 */
 .neo-container-in, .neo-container-out-sm, .neo-container-out-md, .neo-container-out-xl{
-    margin: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: var(--main-color);
-}
-
-.neo-container-in{
-    box-shadow: var(--shadow-in-1), var(--shadow-in-2);
-}
-
-.neo-container-out-sm{
-    box-shadow: var(--shadow-1), var(--shadow-2);
-}
-
-.neo-container-out-md{
-    box-shadow: var(--shadow-1-md), var(--shadow-2-md);
-}
-
-.neo-container-out-xl{
-    box-shadow: var(--shadow-1-xl), var(--shadow-2-xl);
+    padding : 20px;
 }
 
 /*
     BUTTONS
 */
+
+.neo-button:hover, .neo-button-md:hover ,.neo-button-xl:hover{
+    cursor: pointer;
+    transform: var(--zoom-ratio);
+    background-color: var(--main-dk-color);
+}
+
+.neo-button:active, .neo-button-md:active, .neo-button-xl:active{
+    background-color: var(--bg-color);
+}
+
+/*
+    INPUTS
+*/
+
+.neo-input, .neo-text-area{
+    font-weight: bold;
+    color: black;
+}
+
+.neo-text-area::-webkit-scrollbar {
+    width: 1em;
+}
+
+.neo-text-area::-webkit-scrollbar-track {
+    box-shadow: var(--shadow-in-1), var(--shadow-in-2);
+}
+
+.neo-text-area::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 20px;
+    background-color : var(--bg-color);
+    box-shadow: var(--shadow-1), var(--shadow-2);
+}
+
+.neo-input::placeholder{
+    color: var(--font-color);
+}
+
+/*
+    SHADOWS
+*/
+.neo-container-in, .neo-input, .neo-text-area{
+    box-shadow: var(--shadow-in-1), var(--shadow-in-2);
+}
+
+.neo-container-out-sm, .neo-button{
+    box-shadow: var(--shadow-1), var(--shadow-2);
+}
+
+.neo-container-out-md, .neo-button-md{
+    box-shadow: var(--shadow-1-md), var(--shadow-2-md);
+}
+
+.neo-container-out-xl, .neo-button-xl{
+    box-shadow: var(--shadow-1-xl), var(--shadow-2-xl);
+}

@@ -1,0 +1,55 @@
+:root{
+    /* 
+        MAIN COLOURS
+    */
+    --main-color: #EFF2F9;
+    --bg-color: #B5BFC6;
+    --shadow-color-1: rgba(250, 251, 255, 0.7);
+    --shadow-color-2: rgba(22, 27, 29, 0.1) ; 
+
+    /*
+        SHADOWS
+    */
+    --shadow-in-1: inset -5px -5px 5px var(--shadow-color-1);
+    --shadow-in-2: inset 5px 5px 5px var(--shadow-color-2);
+
+    --shadow-1: -5px -5px 5px var(--shadow-color-1);
+    --shadow-2: 5px 5px 5px var(--shadow-color-2);
+
+    --shadow-1-md: -5px -5px 10px var(--shadow-color-1);
+    --shadow-2-md: 5px 5px 10px var(--shadow-color-2);
+
+    --shadow-1-xl: -5px -5px 15px var(--shadow-color-1);
+    --shadow-2-xl: 5px 5px 15px var(--shadow-color-2);
+}
+
+/*
+    CONTAINERS
+*/
+.neo-container-in, .neo-container-out-sm, .neo-container-out-md, .neo-container-out-xl{
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+.neo-container-in{
+    box-shadow: var(--shadow-in-1), var(--shadow-in-2);
+}
+
+.neo-container-out-sm{
+    box-shadow: var(--shadow-1), var(--shadow-2);
+}
+
+.neo-container-out-md{
+    box-shadow: var(--shadow-1-md), var(--shadow-2-md);
+}
+
+.neo-container-out-xl{
+    box-shadow: var(--shadow-1-xl), var(--shadow-2-xl);
+}
+
+/*
+    BUTTONS
+*/

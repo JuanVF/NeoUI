@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../components.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background: #EFF3F6;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            gap: 20px;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: auto;
+            gap: 20px;
+            box-sizing: border-box;
+            align-items: flex-start;
+            align-content: flex-start;
+            justify-items: flex-start;
+        }
+
+        section .neo-text-area{
+            height: 200px;
+        }
+
+        @media screen and (max-width: 768px){
+            body{
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+
+        @media screen and (max-width: 425px){
+            body{
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="neo-container-out-sm">
+        <h1 class="neo-h1">Containers</h1>
+        <div class="neo-container-in">
+            <p>Inner shadow container</p>
+        </div>
+        <div class="neo-container-out-sm">
+            <p>Normal container</p>
+        </div>
+        <div class="neo-container-out-md">
+            <p>Medium length shadow container</p>
+        </div>
+        <div class="neo-container-out-xl">
+            <p>XL length shadow container</p>
+        </div>
+    </section>
+    <section class="neo-container-out-sm">
+        <section style="grid-template-columns: 100%;">
+            <h1 class="neo-h1">Buttons</h1>
+            <button class="neo-button">
+                Normal
+            </button>
+            <button class="neo-button-md">
+                Medium
+            </button>
+            <button class="neo-button-xl">
+                XL Button
+            </button>
+            <div class="neo-container-out-sm" style="display: grid; gap: 20px">
+                <button class="neo-round-button">
+                    <img alt="like" src="like.svg" width="32"/>
+                </button>
+                <button class="neo-round-button">
+                    <img alt="like" src="add-file (1).svg" width="32"/>
+                </button>
+            </div>
+        </section>
+    </section>
+    <section class="neo-container-out-sm">
+        <h1 class="neo-h1">Inputs</h1>
+        <input class="neo-input" placeholder="Example"/>
+        <textarea class="neo-text-area" placeholder="Some example..."></textarea>
+        <input type="date" class="neo-date-picker">
+        <select class="neo-drop-down">
+            <option class="neo-drop-items">Option #1</option>
+            <option class="neo-drop-items">Option #2</option>
+            <option class="neo-drop-items">Option #3</option>
+        </select>
+    </section>
+    <section class="neo-container-out-sm">
+        <h1 class="neo-h1">Check box</h1>
+        <label class="neo-cb-container">
+            Unchecked
+            <input class="neo-cb" type="checkbox"/>
+            <span class="neo-cb-label"></span>
+        </label>
+        <label class="neo-cb-container">
+            Unchecked
+            <input class="neo-cb" type="checkbox" disabled/>
+            <span class="neo-cb-label"></span>
+        </label>
+        <label class="neo-cb-container">
+            Black
+            <input class="neo-cb" type="checkbox" checked/>
+            <span class="neo-cb-label"></span>
+        </label>
+        <label class="neo-cb-container">
+            Cyan
+            <input class="neo-cb" type="checkbox" checked/>
+            <span class="neo-cb-label neo-cb-cyan"></span>
+        </label>
+        <label class="neo-cb-container">
+            Blue
+            <input class="neo-cb" type="checkbox" checked/>
+            <span class="neo-cb-label neo-cb-blue"></span>
+        </label>
+        <label class="neo-cb-container">
+            Red
+            <input class="neo-cb" type="checkbox" checked/>
+            <span class="neo-cb-label neo-cb-red"></span>
+        </label>
+        <label class="neo-cb-container">
+            Green
+            <input class="neo-cb" type="checkbox" checked/>
+            <span class="neo-cb-label neo-cb-green"></span>
+        </label>
+        <label class="neo-cb-container">
+            Orange
+            <input class="neo-cb" type="checkbox" checked/>
+            <span class="neo-cb-label neo-cb-orange"></span>
+        </label>
+        <label class="neo-cb-container">
+            Purple
+            <input class="neo-cb" type="checkbox" checked/>
+            <span class="neo-cb-label neo-cb-purple"></span>
+        </label>
+    </section>
+    <section class="neo-container-out-sm">
+        <h1 class="neo-h1">Radio button</h1>
+        <label class="neo-rb-container">Normal
+          <input class="neo-rb" type="radio" checked="checked" name="radio">
+          <span class="neo-rb-label" class="checkmark"></span>
+        </label>
+        <label class="neo-rb-container">Disabled
+          <input class="neo-rb" type="radio" name="radio" disabled>
+          <span class="neo-rb-label" class="checkmark"></span>
+        </label>
+        <label class="neo-rb-container">Cyan
+          <input class="neo-rb" type="radio" name="radio">
+          <span class="neo-rb-label neo-rb-cyan" class="checkmark"></span>
+        </label>
+        <label class="neo-rb-container">Blue
+          <input class="neo-rb" type="radio" name="radio">
+          <span class="neo-rb-label neo-rb-blue" class="checkmark"></span>
+        </label>
+        <label class="neo-rb-container">Red
+          <input class="neo-rb" type="radio" name="radio">
+          <span class="neo-rb-label neo-rb-red" class="checkmark"></span>
+        </label>
+        <label class="neo-rb-container">Green
+          <input class="neo-rb" type="radio" name="radio">
+          <span class="neo-rb-label neo-rb-green" class="checkmark"></span>
+        </label>
+        <label class="neo-rb-container">Purple
+          <input class="neo-rb" type="radio" name="radio">
+          <span class="neo-rb-label neo-rb-purple" class="checkmark"></span>
+        </label>
+        <label class="neo-rb-container">Orange
+          <input class="neo-rb" type="radio" name="radio">
+          <span class="neo-rb-label neo-rb-orange" class="checkmark"></span>
+        </label>
+    </section>
+    <section class="neo-container-out-sm">
+        <h1 class="neo-h1">Switch</h1>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox"/>
+            <span class="neo-switch-slider"></span>
+        </label>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox" disabled/>
+            <span class="neo-switch-slider"></span>
+        </label>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox" checked/>
+            <span class="neo-switch-slider"></span>
+        </label>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox" checked/>
+            <span class="neo-switch-slider neo-switch-blue"></span>
+        </label>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox" checked/>
+            <span class="neo-switch-slider neo-switch-red"></span>
+        </label>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox" checked/>
+            <span class="neo-switch-slider neo-switch-orange"></span>
+        </label>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox" checked/>
+            <span class="neo-switch-slider neo-switch-green"></span>
+        </label>
+        <label class="neo-switch-container">
+            <input class="neo-switch" type="checkbox" checked/>
+            <span class="neo-switch-slider neo-switch-purple"></span>
+        </label>
+    </section>
+    <section class="neo-container-out-sm">
+        <h1 class="neo-h1">Text</h1>
+        <h1 class="neo-h1">H1 - Example test</h1>
+        <h2 class="neo-h2">H2 - Example test</h2>
+        <h3 class="neo-h3">H3 - Example test</h3>
+        <h4 class="neo-h4">H4 - Example test</h4>
+        <h5 class="neo-h5">H5 - Example test</h5>
+        <h6 class="neo-h6">H6 - Example test</h6>
+    </section>
+</body>
+</html>
